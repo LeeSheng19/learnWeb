@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JsChangeColor</title>
 </head>
+
 <body>
     <button>Change Color</button>
     <script>
-       let btn=document.querySelector('button');
-        function bgChange(){
-            let rndCo='rgb('+random(255)+','+randome(255)+','+random(255)+')';
-            document.body.style.backgroundColor=rndCo;
+        let btn = document.querySelector('button');
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
         }
-        btn.onclick=bgChange;
+        function bgChange() {
+            let rndCo = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rndCo;
+        }
+        btn.addEventListener('click', bgChange);
     </script>
 </body>
+
 </html>
